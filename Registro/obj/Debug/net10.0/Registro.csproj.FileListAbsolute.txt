@@ -1,0 +1,15 @@
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\bin\Debug\net10.0\Registro.exe
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\bin\Debug\net10.0\Registro.deps.json
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\bin\Debug\net10.0\Registro.runtimeconfig.json
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\bin\Debug\net10.0\Registro.dll
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\bin\Debug\net10.0\Registro.pdb
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\obj\Debug\net10.0\Registro.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\obj\Debug\net10.0\Registro.AssemblyInfoInputs.cache
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\obj\Debug\net10.0\Registro.AssemblyInfo.cs
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\obj\Debug\net10.0\Registro.csproj.CoreCompileInputs.cache
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\obj\Debug\net10.0\Registro.sourcelink.json
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\obj\Debug\net10.0\Registro.dll
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\obj\Debug\net10.0\refint\Registro.dll
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\obj\Debug\net10.0\Registro.pdb
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\obj\Debug\net10.0\Registro.genruntimeconfig.cache
+C:\Users\Fabio\Documents\Repository corso CSharp\RegistroScuola\Registro\obj\Debug\net10.0\ref\Registro.dll
