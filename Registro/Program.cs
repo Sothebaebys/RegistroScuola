@@ -19,9 +19,10 @@
          }
       }
    };
-   // mettiamo le funzioni qui
-   //Dizionario : { nome : dizionario<materie:listaint> }
-   //Accetta come argomento un dizionario che come chiave ha la materia e come valore il voto
+
+
+//Funzione per vedere a schermo il registro che può essere singolo o complessivo per tutti gli studenti
+//Gestito tramite booleana come argomento, se true bisogna cercare tramite nome utente.
    public static void VisualizzaRegistro(bool isSingola)
    {
 
@@ -93,6 +94,12 @@
       }
    
    }
+
+
+    public static void Media()
+    {
+        
+    }
 
    public static void Main(string[] args)
    {
