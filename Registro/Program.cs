@@ -31,43 +31,59 @@ class Registro
    // mettiamo le funzioni qui
    private static void InserisciVoto()
    {
-      Console.Write("Nome studente: ");
-      string studente = Console.ReadLine()!;
-      Console.Write("Indicare la materia alla quale si vuole aggiungere il voto: ");
-      string materia = Console.ReadLine()!;
-      Console.Write("Inserire voto: ");
-      int voto;
+      List<int> voti = CercaVotiStudente();
 
-      if(int.TryParse(Console.ReadLine()!, out voto))
-         registro[studente][materia].Add(voto);
+      Console.Write("Inserire voto da aggiungere: ");
+      int voto;
+      while(!int.TryParse(Console.ReadLine()!, out voto) || voto <= 0 || voto > 10)
+      {
+         Console.Write("Voto non valido. Inserire un voto da 1 a 10: ");
+      }
+
+      voti.Add(voto);
+   }
+
+   private static List<int> CercaVotiStudente()
+   {
+      Console.Write("Inserire nome studente: ");
+      Dictionary<string, List<int>> materieStudente;
+      while(!registro.TryGetValue(Console.ReadLine()!, out materieStudente!))
+      {
+         Console.Write("Studente non presente nel registro. Inserire un nome presente: ");
+      }
+
+      Console.Write("Inserire materia: ");
+      List<int> voti;
+      while(!materieStudente.TryGetValue(Console.ReadLine()!, out voti!))
+      {
+         Console.Write("Materia non presente nel registro. Inserire materia esistente: ");
+      }
+
+      return voti;
    }
 
    private static void AggiornaVoto()
    {
-      Console.Write("Nome studente: ");
-      string studente = Console.ReadLine()!;
-      Console.Write("Indicare la materia che contiene il voto da aggiornare: ");
-      string materia = Console.ReadLine()!;
+      List<int> voti = CercaVotiStudente();
+
       Console.Write("Indicare il voto che si vuole modificare tramite indice: ");
-      int indice = int.Parse(Console.ReadLine()!)-1;
-      List<int> listaVoti = registro[studente][materia];
-      int votoAttuale = listaVoti[indice];
-      Console.Write($"Voto attuale: {votoAttuale}\nInserire nuovo voto: ");
-      int nuovoVoto = int.Parse(Console.ReadLine()!);
-      listaVoti[indice] = nuovoVoto;
-
-      Console.WriteLine($"Voto aggiornato, nuovo voto: {registro[studente][materia][indice]}");
-   }
-
-   private static void StampaVoti()
-   {
-      foreach(var kv in registro["Mario Rossi"])
+      int indice;
+      while(!int.TryParse(Console.ReadLine()!, out indice) || indice <= 0 || indice > voti.Count-1)
       {
-         foreach(int voto in kv.Value)
-         {
-            Console.WriteLine(voto);
-         }
+         Console.Write($"Indice fuori dall'intervallo disponibile. Inserire un indice nel range tra 0 e {voti.Count-1}: ");
       }
+
+      int votoAttuale = voti[indice];
+      Console.Write($"Voto attuale: {votoAttuale}\nInserire nuovo voto: ");
+      int nuovoVoto;
+      while(!int.TryParse(Console.ReadLine()!, out nuovoVoto) || nuovoVoto <= 0 || nuovoVoto > 10)
+      {
+         Console.Write("Voto non valido. Inserire un voto da 1 a 10: ");
+      }
+      
+      voti[indice] = nuovoVoto;
+
+      Console.WriteLine($"Voto aggiornato, nuovo voto: {voti[indice]}");
    }
 
    private static void Statistiche()
@@ -127,8 +143,7 @@ class Registro
    public static void Main(string[] args)
    {
       // InserisciVoto();
-      // AggiornaVoto();
-      // StampaVoti();
+      AggiornaVoto();
       Statistiche();
 
    }
