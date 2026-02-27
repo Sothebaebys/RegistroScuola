@@ -1,5 +1,7 @@
 ﻿class Registro
 {
+   static List<string> ricerceRecenti = new List<string>();
+   static string separatore = "==================================================";
     static Dictionary<string, Dictionary<string, List<int>>> registroVoti = new Dictionary<string, Dictionary<string, List<int>>>()
    {
       {
@@ -35,9 +37,9 @@
          // Scelta singola o multipla
          if (registroVoti.ContainsKey(nome))
          {
-            string separatore = "=================================================="; 
+            //string separatore = "=================================================="; 
 
-            Console.WriteLine($"{separatore}\n============REGISTRO============\n{separatore}");
+            Console.WriteLine($"{separatore}\n===========|REGISTRO|===========\n{separatore}");
             Console.WriteLine($"Studente: {nome}\n{separatore}");
 
             Console.WriteLine($"\nMATERIA      || VOTO    ||\n{separatore}");
@@ -68,7 +70,7 @@
       {
          foreach (var studente in registroVoti)
          {
-            string separatore = "=================================================="; 
+            //string separatore = "=================================================="; 
 
             Console.WriteLine($"{separatore}\n=====================REGISTRO=====================\n{separatore}");
             Console.WriteLine($"Studente: {studente.Key}\n{separatore}");
@@ -96,13 +98,91 @@
    }
 
 
-    public static void Media()
+    public static void Ricerca(bool isSingola)
     {
-        
+      //Accesso alla lista ricercaRecenti
+      //Inizializzare la stringa formattata per la lista
+      //Singola
+
+      //Ricerca tramite input
+      //Nome o materia/note
+
+      //Se si vuole accedere ai voti o alle note
+
+
+      if (isSingola)
+      {
+         Console.WriteLine($"Inserisci il nominativo dello studente:");
+         string nome = Console.ReadLine();
+         if (registroVoti.ContainsKey(nome))
+         {
+            int counterMaterie = 0, sommaMedie=0;
+            Console.WriteLine($"{separatore}");
+            Console.WriteLine($"Media dei voti {nome}:");
+            Console.WriteLine($"{separatore}");
+
+            foreach (var materia in registroVoti[nome])
+            {
+               int counterVoto = 0, sommaVoti = 0;
+               counterMaterie +=1;
+               
+               Console.Write($"{materia.Key}: ");
+
+               foreach (var voto in materia.Value)
+               {
+                  counterVoto += 1 ;
+                  sommaVoti += voto; 
+               }
+               sommaMedie += sommaVoti/counterVoto;
+               Console.WriteLine($"{sommaVoti/counterVoto}");
+            }
+            Console.WriteLine($"Media Tot: {sommaMedie/counterMaterie}");
+            
+            }
+         
+         else
+         {
+            Console.WriteLine($"Nominativo non presente, riprova.");
+            Ricerca(true);
+         }
+      }
+      else
+      {
+        foreach (var studente in registroVoti)
+        {
+            int sommaMedie = 0, counterMaterie=0;
+            Console.WriteLine($"{separatore}");
+            Console.WriteLine($"Media di {studente.Key}:");
+            Console.WriteLine($"{separatore}");
+            
+            
+            foreach (var materia in studente.Value)
+            {
+               int counter = 0, sommaVoti = 0;
+               counterMaterie+=1;
+               //int sommaVoti = 0;
+               Console.Write($"{materia.Key}: ");
+
+               foreach (var voto in materia.Value)
+               {
+                  counter += 1 ;
+                  sommaVoti += voto; 
+                  
+               }
+               Console.WriteLine($"{sommaVoti/counter}");
+               sommaMedie += sommaVoti/counter;
+               
+            }
+            Console.WriteLine($"Media Tot: {sommaMedie/counterMaterie}");
+            
+        }
+      }
     }
 
    public static void Main(string[] args)
    {
+      //Media(true);
+      //Ricerca(false);
       VisualizzaRegistro(false);
    }
 
