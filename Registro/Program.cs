@@ -1,4 +1,4 @@
-using System; 
+﻿using System; 
 
 class Registro
 {
@@ -224,7 +224,7 @@ class Registro
    {
       Console.Write("Inserire nome studente: ");
       Dictionary<string, List<int>> materieStudente;
-      while(!registro.TryGetValue(Console.ReadLine()!, out materieStudente!))
+      while(!registroVoti.TryGetValue(Console.ReadLine()!, out materieStudente!))
       {
          Console.Write("Studente non presente nel registro. Inserire un nome presente: ");
       }
@@ -280,7 +280,7 @@ class Registro
          Console.Write($"| {materia}\t");
       }
       Console.WriteLine();
-      foreach(var studente in registro)
+      foreach(var studente in registroVoti)
       {
          Console.Write($"{studente.Key}");
          foreach(var materia in studente.Value)
@@ -348,7 +348,7 @@ class Registro
             {
                 case "1": VisualizzaRegistro(); break;
                 case "2": InserisciVoto(); break;
-                case "3": StampaStatistiche(); break;
+                case "3": Statistiche(); break;
                 case "4": AggiungiNota(); break;
                 case "0": Console.WriteLine("Arrivederci!"); break;
                 default: Console.WriteLine("Scelta non valida."); break;

@@ -8,19 +8,19 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Fabio\\.nuget\\packages\\": {}
+    "/Users/a3b/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fabio\\Documents\\Repository corso CSharp\\RegistroScuola\\Registro\\Registro.csproj",
+      "projectUniqueName": "/Users/a3b/Documents/GitHub/RegistroScuola/Registro/Registro.csproj",
       "projectName": "Registro",
-      "projectPath": "C:\\Users\\Fabio\\Documents\\Repository corso CSharp\\RegistroScuola\\Registro\\Registro.csproj",
-      "packagesPath": "C:\\Users\\Fabio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fabio\\Documents\\Repository corso CSharp\\RegistroScuola\\Registro\\obj\\",
+      "projectPath": "/Users/a3b/Documents/GitHub/RegistroScuola/Registro/Registro.csproj",
+      "packagesPath": "/Users/a3b/.nuget/packages/",
+      "outputPath": "/Users/a3b/Documents/GitHub/RegistroScuola/Registro/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Fabio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/a3b/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
