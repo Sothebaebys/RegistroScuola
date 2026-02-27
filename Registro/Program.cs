@@ -2,7 +2,7 @@
 {
    static List<string> ricerceRecenti = new List<string>();
    static string separatore = "==================================================";
-    static Dictionary<string, Dictionary<string, List<int>>> registroVoti = new Dictionary<string, Dictionary<string, List<int>>>()
+   /* static Dictionary<string, Dictionary<string, List<int>>> registroVoti = new Dictionary<string, Dictionary<string, List<int>>>()
    {
       {
         "Mario Rossi",
@@ -20,7 +20,7 @@
                { "Storia", new List<int> { 7, 7, 8 } }
          }
       }
-   };
+   };*/
 
 
 //Funzione per vedere a schermo il registro che può essere singolo o complessivo per tutti gli studenti
@@ -183,7 +183,7 @@
    {
       //Media(true);
       //Ricerca(false);
-      VisualizzaRegistro(false);
+      //VisualizzaRegistro(false);
    }
 
 }
