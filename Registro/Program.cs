@@ -5,29 +5,29 @@ using System.Xml;
 class Registro
 {
 
-   static string[] studenti = [];
-   static string[] materie = ["Matematica", "Italiano", "Storia"];
-   static Dictionary<string, Dictionary<string, List<int>>> registro = new Dictionary<string, Dictionary<string, List<int>>>()
-   {
-      {
-        "Mario Rossi",
-        new Dictionary<string, List<int>>
-        {
-            { "Matematica", new List<int> { 7, 8, 6 } },
-            { "Italiano", new List<int> {} },
-            { "Storia", new List<int> { 7, 7, 10 } }
-        }
-      },
-      {
-         "Luca Bianchi",
-         new Dictionary<string, List<int>>
-         {
-               { "Matematica", new List<int> { 9, 8 } },
-               { "Italiano", new List<int> { 6, 7 } },
-               { "Storia", new List<int> { 7, 7, 8 } }
-         }
-      }
-   };
+   // static string[] studenti = [];
+   // static string[] materie = ["Matematica", "Italiano", "Storia"];
+   // static Dictionary<string, Dictionary<string, List<int>>> registro = new Dictionary<string, Dictionary<string, List<int>>>()
+   // {
+   //    {
+   //      "Mario Rossi",
+   //      new Dictionary<string, List<int>>
+   //      {
+   //          { "Matematica", new List<int> { 7, 8, 6 } },
+   //          { "Italiano", new List<int> {} },
+   //          { "Storia", new List<int> { 7, 7, 10 } }
+   //      }
+   //    },
+   //    {
+   //       "Luca Bianchi",
+   //       new Dictionary<string, List<int>>
+   //       {
+   //             { "Matematica", new List<int> { 9, 8 } },
+   //             { "Italiano", new List<int> { 6, 7 } },
+   //             { "Storia", new List<int> { 7, 7, 8 } }
+   //       }
+   //    }
+   // };
    // mettiamo le funzioni qui
    private static void InserisciVoto()
    {
@@ -80,7 +80,7 @@ class Registro
       {
          Console.Write("Voto non valido. Inserire un voto da 1 a 10: ");
       }
-      
+
       voti[indice] = nuovoVoto;
 
       Console.WriteLine($"Voto aggiornato, nuovo voto: {voti[indice]}");
